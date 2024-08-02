@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-form',
@@ -13,8 +14,29 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(): void {
+  onSubmit(form: NgForm): void {
+    if (form.valid) {
+      const formData = form.value;
 
+      const footerContent = `
+      <p>Nombre: ${formData.name}</p>
+      <p>Apellido: ${formData.lastname}</p>
+      <p>Correo Electrónico: ${formData.email}</p>
+      <p>Teléfono: ${formData.phone}</p>
+      <p>Mensaje: ${formData.message}</p>
+    `;
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Formulario creado exitosamente!',
+      html: footerContent  // Usa html en lugar de footer para el contenido
+    });
+      
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Por favor, completa todos los campos correctamente.",
+      });
+    }
   }
-
 }
