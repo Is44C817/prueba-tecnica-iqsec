@@ -6,8 +6,17 @@ $chip-width: 40px;
 $border-radius: 10px;
 $font-family: 'Arial', sans-serif;
 
+.credit-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  min-height: 100vh;
+  padding: 20px;
+}
+
 .credit-card {
   width: 100%;
+  max-width: 400px; 
   height: 250px;
   background: $card-bg;
   color: $card-text-color;

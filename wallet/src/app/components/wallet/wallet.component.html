@@ -1,21 +1,25 @@
-<div class="credit-card">
-  <div class="card-header">
-    <div class="chip"></div>
-    <div class="card-logo">
-      <img src="../../../assets/img/brand.gif" alt="Visa">
+<div class="credit-card-container">
+  <div class="credit-card">
+    <div class="card-header">
+      <div class="chip">
+        <!-- Puedes poner una imagen aquí si es necesario -->
+      </div>
+      <div class="card-logo">
+        <img src="../../../assets/img/brand.gif" alt="Visa">
+      </div>
     </div>
-  </div>
-  <div class="card-number">
-    <span>{{ numberCard | maskCardNumber }}</span>
-  </div>
-  <div class="card-info">
-    <div class="card-holder">
-      <label>Titular</label>
-      <span>{{ cardName }}</span>
+    <div class="card-number">
+      <span> {{ numberCard | maskCardNumber }} </span>
     </div>
-    <div class="card-expiry">
-      <label>Válido hasta</label>
-      <span>{{ cardHolder }}</span>
+    <div class="card-info">
+      <div class="card-holder">
+        <label>Titular</label>
+        <span>{{ cardName }}</span>
+      </div>
+      <div class="card-expiry">
+        <label>Válido hasta</label>
+        <span> {{ cardHolder }} </span>
+      </div>
     </div>
   </div>
 </div>

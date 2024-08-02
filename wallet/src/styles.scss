@@ -1,0 +1,8 @@
+$background-color: #f46b45;
+$gradient-background: linear-gradient(to right, #f46b45, #eea849);
+
+body {
+  background: $gradient-background;
+  background: -webkit-linear-gradient(to right, #f46b45, #eea849); 
+  background: $gradient-background;
+}

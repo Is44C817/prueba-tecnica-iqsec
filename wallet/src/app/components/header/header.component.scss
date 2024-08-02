@@ -1,0 +1,26 @@
+$gradient-background: rgb(0, 251, 255);
+
+.navbar {
+    background: $gradient-background;
+    color: white; 
+    padding: 1rem; 
+    border-radius: 5px; 
+    
+    width: 100%;
+    box-sizing: border-box; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    a {
+      color: black;
+      text-decoration: none;
+      margin: 0 1rem; 
+      font-size: 1rem; 
+    }
+  
+    a:hover {
+      text-decoration: underline; 
+    }
+  }
