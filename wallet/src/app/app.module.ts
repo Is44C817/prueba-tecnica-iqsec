@@ -8,6 +8,7 @@ import { MaskCardNumberPipe } from './pipes/mask-card-number.pipe';
 import { FormComponent } from './components/form/form.component';
 import { CarruselComponent } from './components/carrusel/carrusel.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
