@@ -29,7 +29,7 @@ export class FormComponent implements OnInit {
     Swal.fire({
       icon: 'success',
       title: 'Formulario creado exitosamente!',
-      html: footerContent  // Usa html en lugar de footer para el contenido
+      html: footerContent 
     });
       
     } else {
