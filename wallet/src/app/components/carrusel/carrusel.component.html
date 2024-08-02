@@ -5,7 +5,7 @@
     
     <div class="carousel-inner">
       <div class="carousel-item" *ngFor="let card of cards; let i = index" [class.active]="i === 0" data-bs-interval="10000">
-        <app-wallet [cardName]="card.cardName" [cardHolder]="card.cardHolder" [numberCard]="card.numberCard"></app-wallet>
+        <app-wallet [cardName]="card.cardName" [cardHolder]="card.cardHolder" [numberCard]="card.numberCard" [imgCard]="card.imgCard"></app-wallet>
       </div>
     </div>
     
