@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarruselComponent implements OnInit {
 
+  cards = [
+    { cardName: 'Eduardo Moncada', cardHolder: '10/27', numberCard: '4156674677368919' },
+    { cardName: 'Juan Pérez', cardHolder: '12/25', numberCard: '5198734654212365' },
+    { cardName: 'Ana García', cardHolder: '08/24', numberCard: '3465432109876543' },
+    { cardName: 'Luis Fernández', cardHolder: '03/26', numberCard: '6011122233445566' },
+    { cardName: 'Marta López', cardHolder: '11/28', numberCard: '378282246310005' }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
