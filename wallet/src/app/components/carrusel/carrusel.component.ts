@@ -12,4 +12,32 @@ export class CarruselComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  currentIndex = 0;
+  slides = document.querySelectorAll('.carousel-item');
+  indicators = document.querySelectorAll('.indicator');
+
+  nextSlide() {
+    this.changeSlide(this.currentIndex + 1);
+  }
+
+  prevSlide() {
+    this.changeSlide(this.currentIndex - 1);
+  }
+
+  goToSlide(index: number) {
+    this.changeSlide(index);
+  }
+
+  changeSlide(index: number) {
+    if (index >= this.slides.length) index = 0;
+    if (index < 0) index = this.slides.length - 1;
+
+    (document.querySelector('.carousel-inner') as HTMLElement).style.transform = `translateX(-${index * 100}%)`;
+    
+    this.indicators.forEach(indicator => indicator.classList.remove('active'));
+    this.indicators[index].classList.add('active');
+
+    this.currentIndex = index;
+  }
+
 }
